@@ -11,11 +11,17 @@ namespace BasicAccount
         public string Holder { get; private set; }
         public double Balance { get; private set; }
 
-        public Account(int number, string holder, double balance)
+        public Account(int number, string holder)
         {
             Number = number;
             Holder = holder;
-            Balance = balance;
+        }
+
+        public Account(int number, string holder, double initialDeposit)
+        {
+            Number = number;
+            Holder = holder;
+            Deposit(initialDeposit);
         }
 
         public void Deposit(double amount)
@@ -25,7 +31,7 @@ namespace BasicAccount
 
         public void WithDraw(double amount)
         {
-            Balance -= amount;
+            Balance -= amount + 5.0;
         }
 
         public override string ToString()
