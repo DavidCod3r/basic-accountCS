@@ -17,10 +17,8 @@ namespace BasicAccount
             Holder = holder;
         }
 
-        public Account(int number, string holder, double initialDeposit)
+        public Account(int number, string holder, double initialDeposit) : this(number, holder)
         {
-            Number = number;
-            Holder = holder;
             Deposit(initialDeposit);
         }
 
