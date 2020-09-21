@@ -34,7 +34,7 @@ namespace BasicAccount
 
         public override string ToString()
         {
-            return "Account: " + Number + ", Holder: " + Holder + ", Balance : $ " + Balance.ToString("F2", CultureInfo.InvariantCulture);
+            return $"Conta {Number}, Titular: {Holder}, Saldo: $ {Balance.ToString("F2", CultureInfo.InvariantCulture)}";
         }
 
     }
